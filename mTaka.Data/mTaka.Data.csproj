@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{16FC11AE-58E5-4C5D-BC1A-E9FBF3C67571}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mTaka.Data</RootNamespace>
+    <AssemblyName>mTaka.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.021\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.121.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.EntityFramework.12.1.021\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessEntities\ACC\AccMaster.cs" />
+    <Compile Include="BusinessEntities\Charge\CalenderPeriod.cs" />
+    <Compile Include="BusinessEntities\Charge\ChargeActType.cs" />
+    <Compile Include="BusinessEntities\Charge\ChargeApplyDateTime.cs" />
+    <Compile Include="BusinessEntities\Charge\ChargeDeductCust.cs" />
+    <Compile Include="BusinessEntities\Charge\ChargeRateMethod.cs" />
+    <Compile Include="BusinessEntities\Charge\ChargeRateType.cs" />
+    <Compile Include="BusinessEntities\Charge\ChargeRule.cs" />
+    <Compile Include="BusinessEntities\Charge\ChargeRuleType.cs" />
+    <Compile Include="BusinessEntities\Charge\ChargesCategory.cs" />
+    <Compile Include="BusinessEntities\Charge\CustomerFilter.cs" />
+    <Compile Include="BusinessEntities\Charge\DecimalRounding.cs" />
+    <Compile Include="BusinessEntities\Charge\ViewModel\ChargeRuleViewModel.cs" />
+    <Compile Include="BusinessEntities\Commission\CommissionSetup.cs" />
+    <Compile Include="BusinessEntities\Commission\CommissionSetupDTL.cs" />
+    <Compile Include="BusinessEntities\CP\MobileOperator.cs" />
+    <Compile Include="BusinessEntities\CP\TokenFormat.cs" />
+    <Compile Include="BusinessEntities\CP\TransactionSetup.cs" />
+    <Compile Include="BusinessEntities\DashBoard\DashBoardView.cs" />
+    <Compile Include="BusinessEntities\GL\TransGL.cs" />
+    <Compile Include="BusinessEntities\Process\EOD.cs" />
+    <Compile Include="BusinessEntities\Process\Organogram.cs" />
+    <Compile Include="BusinessEntities\SP\AccBalanceType.cs" />
+    <Compile Include="BusinessEntities\CP\Nationality.cs" />
+    <Compile Include="BusinessEntities\CP\SourceofAcc.cs" />
+    <Compile Include="BusinessEntities\CP\TypeofAcc.cs" />
+    <Compile Include="BusinessEntities\GL\GLAccPolicy.cs" />
+    <Compile Include="BusinessEntities\GL\GLChart.cs" />
+    <Compile Include="BusinessEntities\GL\GLLevel.cs" />
+    <Compile Include="BusinessEntities\GL\GLMaster.cs" />
+    <Compile Include="BusinessEntities\SP\AccTypeWiseTarget.cs" />
+    <Compile Include="BusinessEntities\SP\AccTypeWiseTargetView.cs" />
+    <Compile Include="BusinessEntities\SP\ApplPrefix.cs" />
+    <Compile Include="BusinessEntities\SP\IndPerformanceMonitoringView.cs" />
+    <Compile Include="BusinessEntities\SP\PromoCodeConfig.cs" />
+    <Compile Include="BusinessEntities\SP\SpecialOffers.cs" />
+    <Compile Include="BusinessEntities\SP\TransactionRules.cs" />
+    <Compile Include="BusinessEntities\AUTH\AuthLevelLog.cs" />
+    <Compile Include="BusinessEntities\AUTH\AuthLogDtl.cs" />
+    <Compile Include="BusinessEntities\AUTH\FTAuthLevelLog.cs" />
+    <Compile Include="BusinessEntities\AUTH\FTAuthLog.cs" />
+    <Compile Include="BusinessEntities\AUTH\FTAuthLogDtl.cs" />
+    <Compile Include="BusinessEntities\SP\AccStatusSetup.cs" />
+    <Compile Include="BusinessEntities\CP\Address.cs" />
+    <Compile Include="BusinessEntities\CP\CommonService.cs" />
+    <Compile Include="BusinessEntities\CP\IdentificationType.cs" />
+    <Compile Include="BusinessEntities\LEDGER\CustomerLedgerMaster.cs" />
+    <Compile Include="BusinessEntities\LEDGER\CustomerLedgerMasterHist.cs" />
+    <Compile Include="BusinessEntities\LEDGER\CustomerLedgerTxn.cs" />
+    <Compile Include="BusinessEntities\LEDGER\CustomerLedgerTxnHist.cs" />
+    <Compile Include="BusinessEntities\SP\AccType.cs" />
+    <Compile Include="BusinessEntities\ACC\ChannelAccProfile.cs" />
+    <Compile Include="BusinessEntities\AUTH\AuthLog.cs" />
+    <Compile Include="BusinessEntities\CP\AreaInfo.cs" />
+    <Compile Include="BusinessEntities\CP\BankInfo.cs" />
+    <Compile Include="BusinessEntities\CP\BranchInfo.cs" />
+    <Compile Include="BusinessEntities\CP\CityInfo.cs" />
+    <Compile Include="BusinessEntities\CP\PostOfficeInfo.cs" />
+    <Compile Include="BusinessEntities\CP\CountryInfo.cs" />
+    <Compile Include="BusinessEntities\CP\CurrencyInfo.cs" />
+    <Compile Include="BusinessEntities\CP\Department.cs" />
+    <Compile Include="BusinessEntities\CP\Designation.cs" />
+    <Compile Include="BusinessEntities\CP\DistrictInfo.cs" />
+    <Compile Include="BusinessEntities\CP\DivisionInfo.cs" />
+    <Compile Include="BusinessEntities\CP\PSInfo.cs" />
+    <Compile Include="BusinessEntities\CP\UnionInfo.cs" />
+    <Compile Include="BusinessEntities\CP\UpazilaInfo.cs" />
+    <Compile Include="BusinessEntities\SP\CusCategory.cs" />
+    <Compile Include="BusinessEntities\SP\CusType.cs" />
+    <Compile Include="BusinessEntities\SP\CusTypeWiseServiceList.cs" />
+    <Compile Include="BusinessEntities\SP\DefineService.cs" />
+    <Compile Include="BusinessEntities\ACC\CustomerAccProfile.cs" />
+    <Compile Include="BusinessEntities\SP\AccLimitSetup.cs" />
+    <Compile Include="BusinessEntities\LEDGER\LedgerMaster.cs" />
+    <Compile Include="BusinessEntities\LEDGER\LedgerMasterHist.cs" />
+    <Compile Include="BusinessEntities\LEDGER\LedgerTxn.cs" />
+    <Compile Include="BusinessEntities\LEDGER\LedgerTxnHist.cs" />
+    <Compile Include="BusinessEntities\CP\Gender.cs" />
+    <Compile Include="BusinessEntities\SP\ManCategory.cs" />
+    <Compile Include="BusinessEntities\ACC\ManagerAccProfile.cs" />
+    <Compile Include="BusinessEntities\SP\ManagerType.cs" />
+    <Compile Include="BusinessEntities\MenuService.cs" />
+    <Compile Include="BusinessEntities\SP\AccCategory.cs" />
+    <Compile Include="BusinessEntities\SP\StatusWiseService.cs" />
+    <Compile Include="BusinessEntities\Test.cs" />
+    <Compile Include="BusinessEntities\TRN\UserTransaction.cs" />
+    <Compile Include="BusinessEntities\TRN\CashOut.cs" />
+    <Compile Include="BusinessEntities\TRN\FundIn.cs" />
+    <Compile Include="BusinessEntities\TRN\FundOut.cs" />
+    <Compile Include="BusinessEntities\SP\TransactionTemplate.cs" />
+    <Compile Include="BusinessEntities\TRN\FundTransfer.cs" />
+    <Compile Include="BusinessEntities\TRN\TransactionType.cs" />
+    <Compile Include="BusinessEntities\Upload_File\File_Upload.cs" />
+    <Compile Include="BusinessEntities\USB\UsbCollection.cs" />
+    <Compile Include="BusinessEntities\USB\UsbInqHeader.cs" />
+    <Compile Include="BusinessEntities\USB\UsbParam.cs" />
+    <Compile Include="BusinessEntities\USB\UsbParamConfig.cs" />
+    <Compile Include="BusinessEntities\USB\UsbReceive.cs" />
+    <Compile Include="BusinessEntities\USB\USBReportingField.cs" />
+    <Compile Include="BusinessEntities\UserActivityLog.cs" />
+    <Compile Include="Common\AutoMapperCFG.cs" />
+    <Compile Include="Common\ErrorLogService.cs" />
+    <Compile Include="Infrastructure\IRepository.cs" />
+    <Compile Include="Infrastructure\IUnitOfWork.cs" />
+    <Compile Include="Infrastructure\mTakaDbContext.cs" />
+    <Compile Include="Infrastructure\mTakaDbQuery.cs" />
+    <Compile Include="Infrastructure\MTKAttributes.cs" />
+    <Compile Include="Infrastructure\Repository.cs" />
+    <Compile Include="Infrastructure\UnitOfWork.cs" />
+    <Compile Include="Inquery\StatementDataModel.cs" />
+    <Compile Include="OtherEntities\ErrorLog.cs" />
+    <Compile Include="OtherEntities\Menu.cs" />
+    <Compile Include="OtherEntities\PasswordChangeModel.cs" />
+    <Compile Include="OtherEntities\UserCredentials.cs" />
+    <Compile Include="Performance\TopPerformer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\DatabaseConnectionConfig.cs" />
+    <Compile Include="Report\ReportBase.cs" />
+    <Compile Include="Report\ReportConfigMaster.cs" />
+    <Compile Include="Report\ReportConfigParam.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BusinessEntities\IR\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mTaka.Utility\mTaka.Utility.csproj">
+      <Project>{31D61F20-249A-45DC-AF0F-6116CA9E7DC2}</Project>
+      <Name>mTaka.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

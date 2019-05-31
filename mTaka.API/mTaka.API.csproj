@@ -1,0 +1,419 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F8C1D525-C818-4F1D-9122-0D8301EA0638}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mTaka.API</RootNamespace>
+    <AssemblyName>mTaka.API</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.1.0\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.1.0\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.1.0\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.2.1.0\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.1.0\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\mTaka.Data\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Areas\ACC\Views\AccRules\" />
+    <Folder Include="Areas\AM\Controllers\" />
+    <Folder Include="Areas\AM\Views\ManagerProfile\" />
+    <Folder Include="Areas\CM\Controllers\" />
+    <Folder Include="Areas\CM\Views\KnowYourCustomer\" />
+    <Folder Include="Areas\CP\Views\" />
+    <Folder Include="Areas\LEDGER\Views\AgentLedgerMasterHist\" />
+    <Folder Include="Areas\LEDGER\Views\AgentLedgerMaster\" />
+    <Folder Include="Areas\LEDGER\Views\AgentLedgerTxnHist\" />
+    <Folder Include="Areas\LEDGER\Views\AgentLedgerTxn\" />
+    <Folder Include="Areas\LEDGER\Views\CustomerLedger\" />
+    <Folder Include="Areas\Others\Views\AccountInfo\" />
+    <Folder Include="Areas\Others\Views\AccountStatus\" />
+    <Folder Include="Areas\Others\Views\CMDashboard\" />
+    <Folder Include="Areas\Others\Views\UserActivityLog\" />
+    <Folder Include="Areas\Performance\Views\TopPerformer\" />
+    <Folder Include="Areas\Process\Views\EOD\" />
+    <Folder Include="Areas\Process\Views\Organograms\" />
+    <Folder Include="Areas\SP\Views\SpecialOffer\" />
+    <Folder Include="Areas\TRN\Views\FundTransfer\" />
+    <Folder Include="Areas\TRN\Views\TransactionTemplate\" />
+    <Folder Include="Areas\Upload_File\Views\FileUpload\" />
+    <Folder Include="Areas\USB\Views\USBParam\" />
+    <Folder Include="Areas\USB\Views\UsbReceive\" />
+    <Folder Include="Areas\USB\Views\USBReportingField\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\ACC\ACAreaRegistration.cs" />
+    <Compile Include="Areas\Charge\ChargeAreaRegistration.cs" />
+    <Compile Include="Areas\Charge\Controllers\CalenderPeriodController.cs" />
+    <Compile Include="Areas\Charge\Controllers\ChargeActTypeController.cs" />
+    <Compile Include="Areas\Charge\Controllers\ChargeRateMethodController.cs" />
+    <Compile Include="Areas\Charge\Controllers\ChargeRateTypeController.cs" />
+    <Compile Include="Areas\Charge\Controllers\ChargeRuleController.cs" />
+    <Compile Include="Areas\Charge\Controllers\ChargeRuleTypeController.cs" />
+    <Compile Include="Areas\Charge\Controllers\ChargesCategoryController.cs" />
+    <Compile Include="Areas\Charge\Controllers\CustomerFilterController.cs" />
+    <Compile Include="Areas\Charge\Controllers\DecimalRoundingController.cs" />
+    <Compile Include="Areas\Commission\CommissionAreaRegistration.cs" />
+    <Compile Include="Areas\Commission\Controllers\CommissionSetupController.cs" />
+    <Compile Include="Areas\GL\Controllers\GLChartController.cs" />
+    <Compile Include="Areas\GL\GLAreaRegistration.cs" />
+    <Compile Include="Areas\Inquiry\Controllers\InqueryController.cs" />
+    <Compile Include="Areas\Inquiry\InquiryAreaRegistration.cs" />
+    <Compile Include="Areas\Dashboard\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\Performance\Controllers\TopPerformerController.cs" />
+    <Compile Include="Areas\Process\Controller\EODController.cs" />
+    <Compile Include="Areas\Process\Controller\OrganogramsController.cs" />
+    <Compile Include="Areas\QR\Controllers\QrOperationController.cs" />
+    <Compile Include="Areas\Report\Controllers\ReportConfigMasterController.cs" />
+    <Compile Include="Areas\Report\Controllers\ReportConfigParmController.cs" />
+    <Compile Include="Areas\Report\ReportAreaRegistration.cs" />
+    <Compile Include="Areas\SP\Controllers\AccTypeWiseTargetController.cs" />
+    <Compile Include="Areas\SP\Controllers\PromoCodeConfigController.cs" />
+    <Compile Include="Areas\SP\Controllers\SpecialOfferController.cs" />
+    <Compile Include="Areas\SP\Controllers\TransactionRulesController.cs" />
+    <Compile Include="Areas\AM\AMAreaRegistration.cs" />
+    <Compile Include="Areas\ACC\Controllers\ChannelAccProfileController.cs" />
+    <Compile Include="Areas\ACC\Controllers\ManagerAccProfileController.cs" />
+    <Compile Include="Areas\AUTH\AUTHAreaRegistration.cs" />
+    <Compile Include="Areas\AUTH\Controllers\AuthLogController.cs" />
+    <Compile Include="Areas\CM\CMAreaRegistration.cs" />
+    <Compile Include="Areas\ACC\Controllers\CustomerAccProfileController.cs" />
+    <Compile Include="Areas\SP\Controllers\AccStatusSetupController.cs" />
+    <Compile Include="Areas\CP\Controllers\AreaInfoController.cs" />
+    <Compile Include="Areas\CP\Controllers\BankInfoController.cs" />
+    <Compile Include="Areas\CP\Controllers\BranchInfoController.cs" />
+    <Compile Include="Areas\CP\Controllers\CityInfoController.cs" />
+    <Compile Include="Areas\CP\Controllers\CommonServiceController.cs" />
+    <Compile Include="Areas\CP\Controllers\CountryInfoController.cs" />
+    <Compile Include="Areas\CP\Controllers\CurrencyInfoController.cs" />
+    <Compile Include="Areas\CP\Controllers\DepartmentController.cs" />
+    <Compile Include="Areas\CP\Controllers\DesignationController.cs" />
+    <Compile Include="Areas\CP\Controllers\DistrictInfoController.cs" />
+    <Compile Include="Areas\CP\Controllers\DivisionInfoController.cs" />
+    <Compile Include="Areas\CP\Controllers\IdentificationTypeController.cs" />
+    <Compile Include="Areas\CP\Controllers\PostOfficeController.cs" />
+    <Compile Include="Areas\CP\Controllers\PSInfoController.cs" />
+    <Compile Include="Areas\CP\Controllers\UnionInfoController.cs" />
+    <Compile Include="Areas\CP\Controllers\UpazilaInfoController.cs" />
+    <Compile Include="Areas\CP\CPAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Areas\LEDGER\Controllers\LedgerController.cs" />
+    <Compile Include="Areas\LEDGER\LEDGERAreaRegistration.cs" />
+    <Compile Include="Areas\ACC\Controllers\AccMasterController.cs" />
+    <Compile Include="Areas\SP\Controllers\DefineServiceController.cs" />
+    <Compile Include="Areas\Others\Controllers\ErrorLogController.cs" />
+    <Compile Include="Areas\Others\Controllers\SignInController.cs" />
+    <Compile Include="Areas\Others\Controllers\MenuController.cs" />
+    <Compile Include="Areas\SP\Controllers\StatusWiseServiceMapController.cs" />
+    <Compile Include="Areas\Others\Controllers\UserActivityLogController.cs" />
+    <Compile Include="Areas\Others\OthersAreaRegistration.cs" />
+    <Compile Include="Areas\Report\Controllers\ReportController.cs" />
+    <Compile Include="Areas\SP\Controllers\AccCategoryController.cs" />
+    <Compile Include="Areas\SP\Controllers\AccLimitSetupController.cs" />
+    <Compile Include="Areas\SP\Controllers\AccTypeController.cs" />
+    <Compile Include="Areas\SP\Controllers\CusCategoryController.cs" />
+    <Compile Include="Areas\SP\Controllers\CusTypeController.cs" />
+    <Compile Include="Areas\SP\Controllers\CusTypeWiseServiceListController.cs" />
+    <Compile Include="Areas\SP\Controllers\ManagerCategoryController.cs" />
+    <Compile Include="Areas\SP\Controllers\ManagerTypeController.cs" />
+    <Compile Include="Areas\SP\SPAreaRegistration.cs" />
+    <Compile Include="Areas\TRN\Controllers\CashInController.cs" />
+    <Compile Include="Areas\TRN\Controllers\CashOutController.cs" />
+    <Compile Include="Areas\TRN\Controllers\FundInController.cs" />
+    <Compile Include="Areas\TRN\Controllers\FundOutController.cs" />
+    <Compile Include="Areas\SP\Controllers\TransactionTemplateController.cs" />
+    <Compile Include="Areas\TRN\Controllers\FundTransferController.cs" />
+    <Compile Include="Areas\TRN\TRNAreaRegistration.cs" />
+    <Compile Include="Areas\Upload_File\FileUploadController.cs" />
+    <Compile Include="Areas\USB\USBParamController.cs" />
+    <Compile Include="Areas\USB\UsbReceiveController.cs" />
+    <Compile Include="Areas\USB\USBReportingFieldController.cs" />
+    <Compile Include="Common\DataManipulation.cs" />
+    <Compile Include="Common\HttpWcfRequest.cs" />
+    <Compile Include="Common\ModelValidation.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Resources\Newtonsoft.Json.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\System.Net.Http.Formatting.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\System.Web.Http.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <None Include="Properties\PublishProfiles\mTakaWebAPI.pubxml" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mTaka.Data\mTaka.Data.csproj">
+      <Project>{16fc11ae-58e5-4c5d-bc1a-e9fbf3c67571}</Project>
+      <Name>mTaka.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mTaka.Service\mTaka.Service.csproj">
+      <Project>{7f0965a4-670a-4eaa-83ff-d2a14200bca9}</Project>
+      <Name>mTaka.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mTaka.Utility\mTaka.Utility.csproj">
+      <Project>{31d61f20-249a-45dc-af0f-6116ca9e7dc2}</Project>
+      <Name>mTaka.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50380</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50380/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

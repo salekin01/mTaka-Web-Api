@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7F0965A4-670A-4EAA-83FF-D2A14200BCA9}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>mTaka.Service</RootNamespace>
+    <AssemblyName>mTaka.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.6\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Oracle.ManagedDataAccess.12.1.021\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BusinessServices\Charge\CalenderPeriodService.cs" />
+    <Compile Include="BusinessServices\Charge\ChargeActTypeService.cs" />
+    <Compile Include="BusinessServices\Charge\ChargeApplyDateTimeService.cs" />
+    <Compile Include="BusinessServices\Charge\ChargeDeductCustService.cs" />
+    <Compile Include="BusinessServices\Charge\ChargeRateMethodService.cs" />
+    <Compile Include="BusinessServices\Charge\ChargeRateTypeService.cs" />
+    <Compile Include="BusinessServices\Charge\ChargeRuleService.cs" />
+    <Compile Include="BusinessServices\Charge\ChargeRuleTypeService.cs" />
+    <Compile Include="BusinessServices\Charge\ChargesCategoryService.cs" />
+    <Compile Include="BusinessServices\Charge\CustomerFilterService.cs" />
+    <Compile Include="BusinessServices\Charge\DecimalRoundingService.cs" />
+    <Compile Include="BusinessServices\Commission\CommissionInfoService.cs" />
+    <Compile Include="BusinessServices\DashBoard\DashboardService.cs" />
+    <Compile Include="BusinessServices\GL\GLChartService.cs" />
+    <Compile Include="BusinessServices\GL\GLMasterService.cs" />
+    <Compile Include="BusinessServices\Process\EODService.cs" />
+    <Compile Include="BusinessServices\Process\OrganogramService.cs" />
+    <Compile Include="BusinessServices\SP\AccTypeWiseTargetService.cs" />
+    <Compile Include="BusinessServices\SP\PromoCodeConfigService.cs" />
+    <Compile Include="BusinessServices\SP\ReportConfigarationService.cs" />
+    <Compile Include="BusinessServices\SP\SpecialOfferService.cs" />
+    <Compile Include="BusinessServices\SP\TransactionRulesService.cs" />
+    <Compile Include="BusinessServices\CP\CommonServiceService.cs" />
+    <Compile Include="BusinessServices\SP\CusTypeWiseServiceListService.cs" />
+    <Compile Include="BusinessServices\CP\IdentificationTypeService.cs" />
+    <Compile Include="BusinessServices\SP\AccCategoryService.cs" />
+    <Compile Include="BusinessServices\SP\AccLimitSetupService.cs" />
+    <Compile Include="BusinessServices\ACC\AccMasterService.cs" />
+    <Compile Include="BusinessServices\SP\AccTypeService.cs" />
+    <Compile Include="BusinessServices\ACC\ChannelAccProfileService.cs" />
+    <Compile Include="BusinessServices\AUTH\AuthLogService.cs" />
+    <Compile Include="BusinessServices\SP\AccStatusSetupService.cs" />
+    <Compile Include="BusinessServices\CP\AreaInfoService.cs" />
+    <Compile Include="BusinessServices\CP\BankInfoService.cs" />
+    <Compile Include="BusinessServices\CP\BranchInfoService.cs" />
+    <Compile Include="BusinessServices\CP\CityInfoService.cs" />
+    <Compile Include="BusinessServices\CP\CountryInfoService.cs" />
+    <Compile Include="BusinessServices\CP\CurrencyInfoService.cs" />
+    <Compile Include="BusinessServices\CP\DepartmentService.cs" />
+    <Compile Include="BusinessServices\CP\DesignationService.cs" />
+    <Compile Include="BusinessServices\CP\DistrictInfoService.cs" />
+    <Compile Include="BusinessServices\CP\DivisionInfoService.cs" />
+    <Compile Include="BusinessServices\CP\PostOfficeInfoService.cs" />
+    <Compile Include="BusinessServices\CP\PSInfoService.cs" />
+    <Compile Include="BusinessServices\CP\UnionInfoService.cs" />
+    <Compile Include="BusinessServices\CP\UpazilaInfoService.cs" />
+    <Compile Include="BusinessServices\SP\CusCategoryService.cs" />
+    <Compile Include="BusinessServices\SP\CusTypeService.cs" />
+    <Compile Include="BusinessServices\SP\DefineServiceService.cs" />
+    <Compile Include="BusinessServices\ACC\CustomerAccProfileService.cs" />
+    <Compile Include="BusinessServices\LEDGER\LedgerService.cs" />
+    <Compile Include="BusinessServices\SP\ManCategoryService.cs" />
+    <Compile Include="BusinessServices\ACC\ManagerAccProfileService.cs" />
+    <Compile Include="BusinessServices\SP\ManagerTypeService.cs" />
+    <Compile Include="BusinessServices\SP\StatusWiseServiceService.cs" />
+    <Compile Include="BusinessServices\TRN\CashInService.cs" />
+    <Compile Include="BusinessServices\TRN\CashOutService.cs" />
+    <Compile Include="BusinessServices\TRN\FundInService.cs" />
+    <Compile Include="BusinessServices\TRN\FundOutService.cs" />
+    <Compile Include="BusinessServices\SP\TransactionTemplateService.cs" />
+    <Compile Include="BusinessServices\TRN\FundTransferService.cs" />
+    <Compile Include="BusinessServices\Upload_File\FileUploadService.cs" />
+    <Compile Include="BusinessServices\USB\UsbReceiveService.cs" />
+    <Compile Include="BusinessServices\USB\UsbParamService.cs" />
+    <Compile Include="BusinessServices\USB\USBReportingFieldService.cs" />
+    <Compile Include="BusinessServices\UserActivityLogService.cs" />
+    <Compile Include="Common\ObjectCopier.cs" />
+    <Compile Include="Common\ExceptionExtendedMethods.cs" />
+    <Compile Include="Inquery\MiniStatementService.cs" />
+    <Compile Include="OtherServices\ErrorLogService.cs" />
+    <Compile Include="Performance\TopPerformerService.cs" />
+    <Compile Include="ReportService\ReportService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\mTaka.Data\mTaka.Data.csproj">
+      <Project>{16fc11ae-58e5-4c5d-bc1a-e9fbf3c67571}</Project>
+      <Name>mTaka.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\mTaka.Utility\mTaka.Utility.csproj">
+      <Project>{31d61f20-249a-45dc-af0f-6116ca9e7dc2}</Project>
+      <Name>mTaka.Utility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="BusinessServices\IR\" />
+    <Folder Include="System\Web\UI\WebControls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
